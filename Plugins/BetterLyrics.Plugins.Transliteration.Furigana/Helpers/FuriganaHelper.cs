@@ -1,7 +1,6 @@
 using BetterLyrics.Plugins.Transliteration.Furigana.Models;
 using MeCab;
 using MeCab.Extension.UniDic;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace BetterLyrics.Plugins.Transliteration.Furigana.Helpers
@@ -14,17 +13,17 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana.Helpers
         /// <summary>
         /// 分词器
         /// </summary>
-        private static MeCabTagger? _tagger;
+        private static MeCabTagger _tagger;
 
         /// <summary>
         /// 自定义词典<原文，假名>
         /// </summary>
-        private static Dictionary<string, string>? _customizeDict;
+        private static Dictionary<string, string> _customizeDict;
 
         /// <summary>
         /// 初始化分词器和词典
         /// </summary>
-        public static void Init(string? baseDirectory = null)
+        public static void Init(string baseDirectory = null)
         {
             string rootPath = !string.IsNullOrEmpty(baseDirectory)
                      ? baseDirectory

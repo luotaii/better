@@ -9,7 +9,7 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana.Models
     public class ReplaceString : INotifyPropertyChanged
     {
         private ushort _id;
-        private string? _text;
+        private string _text;
         private bool _isSelected;
 
         public ReplaceString(ushort id, string text, bool isSelected = false)
@@ -30,7 +30,7 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana.Models
             }
         }
 
-        public string? Text
+        public string Text
         {
             get => _text;
             set
@@ -52,9 +52,9 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana.Models
             }
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
