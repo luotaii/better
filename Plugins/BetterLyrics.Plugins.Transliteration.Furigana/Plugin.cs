@@ -31,7 +31,11 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana
                     
                     // 使用 FuriganaHelper 处理每一行
                     var convertedLines = FuriganaHelper.ToFurigana(line);
-                    return string.Join(" ", convertedLines.FirstOrDefault()?.Units.Select(unit => 
+                    var firstLine = convertedLines.FirstOrDefault();
+                    if (firstLine == null)
+                        return line;
+                        
+                    return string.Join(" ", firstLine.Units.Select(unit => 
                     {
                         // 如果是汉字，返回 [汉字] (假名) 格式
                         if (unit.IsKanji && !string.IsNullOrEmpty(unit.Hiragana))
@@ -40,7 +44,7 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana
                         }
                         // 如果不是汉字，直接返回原文
                         return unit.Japanese;
-                    }) ?? line);
+                    }));
                 }));
             }
             

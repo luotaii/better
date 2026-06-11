@@ -9,10 +9,10 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana.Models
     /// </summary>
     public class ConvertedUnit : INotifyPropertyChanged
     {
-        private string _hiragana;
+        private string? _hiragana;
         private bool _isKanji;
-        private string _japanese;
-        private ObservableCollection<ReplaceString> _replaceHiragana;
+        private string? _japanese;
+        private ObservableCollection<ReplaceString>? _replaceHiragana;
         private ushort _selectId;
         private ushort _lineIndex;
 
@@ -37,7 +37,7 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana.Models
             }
         }
 
-        public string Japanese
+        public string? Japanese
         {
             get => _japanese;
             set
@@ -48,7 +48,7 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana.Models
             }
         }
 
-        public string Hiragana
+        public string? Hiragana
         {
             get => _hiragana;
             set
@@ -59,7 +59,7 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana.Models
             }
         }
 
-        public ObservableCollection<ReplaceString> ReplaceHiragana
+        public ObservableCollection<ReplaceString>? ReplaceHiragana
         {
             get => _replaceHiragana;
             set
@@ -92,9 +92,9 @@ namespace BetterLyrics.Plugins.Transliteration.Furigana.Models
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
