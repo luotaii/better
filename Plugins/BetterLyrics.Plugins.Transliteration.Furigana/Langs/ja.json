@@ -1,0 +1,9 @@
+{
+  "Language": "ja",
+  "Resources": {
+    "PluginTitle": "振り仮名",
+    "PluginDescription": "歌詞の日本語漢字に読み仮名を振ります",
+    "OnlyKanji": "漢字のみ",
+    "UseHiragana": "ひらがなを使用"
+  }
+}

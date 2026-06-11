@@ -1,0 +1,9 @@
+{
+  "Language": "zh-Hans",
+  "Resources": {
+    "PluginTitle": "振假名",
+    "PluginDescription": "为日语歌词的汉字标注假名",
+    "OnlyKanji": "仅标注汉字",
+    "UseHiragana": "使用平假名"
+  }
+}

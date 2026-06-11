@@ -1,0 +1,9 @@
+{
+  "Language": "en",
+  "Resources": {
+    "PluginTitle": "Furigana",
+    "PluginDescription": "Add furigana annotations to Japanese kanji in lyrics",
+    "OnlyKanji": "Kanji Only",
+    "UseHiragana": "Use Hiragana"
+  }
+}
